@@ -1,13 +1,10 @@
-from django.db.models import Avg
 from django.contrib.auth import get_user_model
-from django.shortcuts import get_object_or_404
 from django.contrib.auth.tokens import default_token_generator
-
+from django.db.models import Avg
+from django.shortcuts import get_object_or_404
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
-
-from reviews.models import Comment, Review, Genre, Title, Category
-
+from reviews.models import Category, Comment, Genre, Review, Title
 
 User = get_user_model()
 

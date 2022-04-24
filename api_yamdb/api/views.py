@@ -1,28 +1,26 @@
-from django.core.mail import send_mail
-from django_filters.rest_framework import DjangoFilterBackend
-from django.shortcuts import get_object_or_404
-from django.contrib.auth.tokens import default_token_generator
+from api.filters import TitleFilter
 from django.contrib.auth import get_user_model
-
-from rest_framework import viewsets, status, filters, mixins
-from rest_framework.response import Response
-from rest_framework.exceptions import ValidationError
+from django.contrib.auth.tokens import default_token_generator
+from django.core.mail import send_mail
+from django.shortcuts import get_object_or_404
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters, mixins, status, viewsets
 from rest_framework.decorators import api_view, permission_classes
+from rest_framework.exceptions import ValidationError
 from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
+from reviews.models import Category, Genre, Review, Title
 
 from api_yamdb.settings import PROJECT_MAIL
 
-from .serializers import (
-    UserSerializer, UserAuthSerializer, UserTokenSerializer,
-    CommentSerializer, ReviewSerializer, GenreSerializer,
-    TitleSerializer, CategorySerializer, TitleReadSerializer
-)
-from .permissions import (AdminRoleOnly, ReadOnly,
-                          IsAuthorModeratorAdminOrReadOnly)
-from reviews.models import Genre, Title, Category, Review
-from api.filters import TitleFilter
-
+from .permissions import (AdminRoleOnly, IsAuthorModeratorAdminOrReadOnly,
+                          ReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReviewSerializer,
+                          TitleReadSerializer, TitleSerializer,
+                          UserAuthSerializer, UserSerializer,
+                          UserTokenSerializer)
 
 User = get_user_model()
 
