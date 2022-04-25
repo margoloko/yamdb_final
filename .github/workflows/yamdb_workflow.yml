@@ -1,4 +1,4 @@
-name: CI
+name: yamdb_final workflow
 
 on:
   push:

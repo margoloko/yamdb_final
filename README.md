@@ -1,3 +1,5 @@
+![example workflow](https://github.com/margoloko/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 ## Проект YamDB
 
 ### О проекте:
