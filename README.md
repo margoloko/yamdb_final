@@ -14,16 +14,14 @@
 - Postgres
 
 ### Заполнение .env файла:
-В директории infra_sp2/infra/ необходимо создать файл .env и указать следующие значения:
 
 - SECRET_KEY
-- SERVERNAMES
-- DB_ENGINE
-- DB_NAME
-- POSTGRES_USER
-- POSTGRES_PASSWORD
-- DB_HOST
-- DB_PORT
+- DB_ENGINE=django.db.backends.postgresql
+- DB_NAME=postgres
+- POSTGRES_USER=postgres
+- POSTGRES_PASSWORD=postgres
+- DB_HOST=db
+- DB_PORT=5432
 
 ### Для запуска приложения в контейнерах:
 - Установите Docker

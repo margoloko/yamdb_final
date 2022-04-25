@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: margoloko/api_yamdb_final:latest
+    image: margoloko/yamdb_final:latest
     restart: always
     volumes:
       - static_value:/app/static/
