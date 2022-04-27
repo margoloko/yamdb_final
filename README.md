@@ -4,7 +4,7 @@
 
 ### О проекте:
 
-    Проект Yamdb собирает отзывы пользователей на различные произведения.
+Проект Yamdb собирает отзывы пользователей на различные произведения.
 
     Проект доступен по адресу: 
     ``` http://84.201.160.207/api/v1/ ```
@@ -17,7 +17,7 @@
 - Django Rest Framework
 - Docker
 - Postgres
-
+-- -
 ### Заполнение .env файла:
 
 - SECRET_KEY
@@ -27,7 +27,7 @@
 - POSTGRES_PASSWORD=postgres
 - DB_HOST=db
 - DB_PORT=5432
-
+-- -
 ### Для запуска приложения в контейнерах:
 - Установите Docker
 - Клонируйте репозиторий
@@ -40,6 +40,6 @@
 ``` docker-compose exec web python manage.py createsuperuser ```
 - Для сбора статики воспользуйтесь командой
 ``` docker-compose exec web python manage.py collectstatic --no-input ```
-
+-- -
 ### Автор:
 Марина
