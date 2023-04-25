@@ -42,5 +42,5 @@
 - Для сбора статики воспользуйтесь командой
 ``` docker-compose exec web python manage.py collectstatic --no-input ```
 -- -
-### Автор:
-Марина
+### Author:
+[Balakhonova Marina](https://github.com/margoloko)
